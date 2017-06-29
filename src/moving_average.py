@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# github - klatimer/kalman_pred
+# github - klatimer/position_prediction
 import rospy
 from geometry_msgs.msg import *
 from std_msgs.msg import Int64
