@@ -3,7 +3,7 @@
 # github - klatimer/position_prediction
 import rospy
 from geometry_msgs.msg import *
-from std_msgs.msg import Int64
+from std_msgs.msg import *
 from collections import deque	
 import numpy
 
@@ -43,7 +43,7 @@ class MovingAverage:
 					dq.appendleft(latest_point[1] + slope * time_step)
 				return dq
 			xpred = generate_predicted_states(self.xbuf)
-			ypred = generate_predicted_states(self.xbuf)
+			ypred = generate_predicted_states(self.ybuf)
 			self.xbuf.pop()
 			self.ybuf.pop()
 			self.tbuf.pop()
